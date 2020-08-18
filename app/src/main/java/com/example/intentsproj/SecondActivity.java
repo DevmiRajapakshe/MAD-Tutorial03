@@ -24,6 +24,7 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+
         editNo1 = findViewById(R.id.editno1);
         editNo2 = findViewById(R.id.editNo2);
 
@@ -34,25 +35,30 @@ public class SecondActivity extends AppCompatActivity {
         editNo1.setText(num1);
         editNo2.setText(num2);
 
-        no1 = Float.valueOf(num1);
-        no2 = Float.valueOf(num2);
-
         txtView = (TextView) findViewById(R.id.result);
     }
 
     public void add(View view){
+        no1 = Float.valueOf(editNo1.getText().toString());
+        no2 = Float.valueOf(editNo2.getText().toString());
         txtView.setText(""+no1+"+"+no2+" = "+(no1+no2));
     }
 
     public void substract(View view){
+        no1 = Float.valueOf(editNo1.getText().toString());
+        no2 = Float.valueOf(editNo2.getText().toString());
         txtView.setText(""+no1+"-"+no2+" = "+(no1-no2));
     }
 
     public void multiply(View view){
+        no1 = Float.valueOf(editNo1.getText().toString());
+        no2 = Float.valueOf(editNo2.getText().toString());
         txtView.setText(""+no1+"*"+no2+" = "+(no1*no2));
     }
 
     public void divide(View view){
+        no1 = Float.valueOf(editNo1.getText().toString());
+        no2 = Float.valueOf(editNo2.getText().toString());
         txtView.setText(""+no1+"/"+no2+" = "+(no1/no2));
     }
 

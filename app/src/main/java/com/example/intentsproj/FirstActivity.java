@@ -15,16 +15,16 @@ import android.widget.Toast;
 
 public class FirstActivity extends AppCompatActivity {
 
-    EditText editNo1;
-    EditText editNo2;
+    EditText editNo01;
+    EditText editNo02;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
-        editNo1 = findViewById(R.id.editno1);
-        editNo2 = findViewById(R.id.editNo2);
+        editNo01 = findViewById(R.id.editNo01);
+        editNo02 = findViewById(R.id.editNo02);
 
         Button okay = (Button)findViewById(R.id.ok);
         okay.setOnClickListener(new View.OnClickListener() {
@@ -46,8 +46,8 @@ public class FirstActivity extends AppCompatActivity {
                 toast.show();
 
                 Intent myIntent = new Intent(FirstActivity.this, SecondActivity.class);
-                    myIntent.putExtra("Number1",editNo1.getText().toString());
-                    myIntent.putExtra("Number2",editNo2.getText().toString());
+                    myIntent.putExtra("Number1",editNo01.getText().toString());
+                    myIntent.putExtra("Number2",editNo02.getText().toString());
                     startActivity(myIntent);
             }
         });
